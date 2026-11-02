@@ -1,0 +1,52 @@
+project:
+  type: website
+  output-dir: _site
+  pre-render: python ../scripts/sync_site_assets.py
+  resources:
+    - assets/**
+
+website:
+  title: "PFC 3W"
+  favicon: favicon.svg
+  description: >-
+    Validação fisicamente independente e pré-processamento causal de
+    classificadores no 3W Dataset.
+  navbar:
+    background: "#0B2239"
+    foreground: light
+    left:
+      - href: index.qmd
+        text: Visão geral
+      - href: problem.qmd
+        text: Problema
+      - href: method.qmd
+        text: Método
+      - href: results.qmd
+        text: Resultados
+      - href: xai.qmd
+        text: XAI
+      - href: limitations.qmd
+        text: Limitações
+      - href: reproducibility.qmd
+        text: Reprodução
+  page-footer:
+    left: "Lucas Santana da Silva · Universidade de Brasília"
+    right: "PFC em Engenharia Mecatrônica — Controle e Automação"
+  search: true
+
+bibliography: ../references/library.bib
+
+format:
+  html:
+    lang: pt-BR
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    code-copy: true
+    anchor-sections: true
+    smooth-scroll: true
+    link-external-newwindow: true
+
+execute:
+  freeze: auto

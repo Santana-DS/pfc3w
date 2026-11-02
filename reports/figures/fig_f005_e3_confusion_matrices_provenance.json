@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "figure_id": "F005",
+  "inputs": {
+    "results/e3-rf-causal-oof__619b3c8c1d/oof_predictions.parquet": "4e5b5e58df81822c7a11a65ccf035c12edd84052e0925fdd9e89a08328fe1909",
+    "results/e3-xgboost-causal-oof__453a98252e/oof_predictions.parquet": "c2611e1a479a8619507496c8962bb401f2bac231b1c8d3768b796c1d2f99842b"
+  },
+  "outputs": {
+    "fig_f005_e3_confusion_matrices.pdf": "56e5ce7003607627451ced761adfb82b26e65cdcd8b589c805afafbf4f8ff0ce",
+    "fig_f005_e3_confusion_matrices.png": "89a21afedf1a354c6f64a2c285765b9a962b83434fa28085c16ee877f8e00646"
+  },
+  "normalization": "rows (true-label support)",
+  "labels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    101,
+    102,
+    105,
+    106,
+    107,
+    108,
+    109
+  ],
+  "run_ids": [
+    "e3-rf-causal-oof__619b3c8c1d",
+    "e3-xgboost-causal-oof__453a98252e"
+  ]
+}

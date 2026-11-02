@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "figure_id": "F002",
+  "inputs": {
+    "reports/tables/tab_t004_e0_e3_metrics.csv": "1b25234d398ac6a3f05039b2df7fdbf5c5485a1742aa44a8ca120d19c0af1bb0"
+  },
+  "outputs": {
+    "fig_f002_e0_e3_f1_macro.pdf": "73244c6a01aace3c9bc6b6b9662038108782a969828e6aa5b7eabecb5527465e",
+    "fig_f002_e0_e3_f1_macro.png": "48b90776f8fb0cf8edb15ea67da7bf1c3ba2ce6e8f02f9b9f243249aabed9221"
+  },
+  "metric": "f1_macro_all_labels",
+  "run_ids": [
+    "e0-rf-retrospective-oof__c7a61d9f00",
+    "e1-rf-retrospective-oof__c0383f2b87",
+    "e2-rf-causal-oof__af2b9a92a9",
+    "e3-rf-causal-oof__619b3c8c1d",
+    "e0-xgboost-retrospective-oof__25d2e05d86",
+    "e1-xgboost-retrospective-oof__25ed36d758",
+    "e2-xgboost-causal-oof__be63c3106d",
+    "e3-xgboost-causal-oof__453a98252e"
+  ],
+  "interpretation": "controlled E0--E3 comparison; R0 excluded"
+}

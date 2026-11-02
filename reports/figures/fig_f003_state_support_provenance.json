@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "figure_id": "F003",
+  "inputs": {
+    "reports/tables/tab_t003_state_support.csv": "57273bb3d20808ab82337b0fd4aa9a9357688cd77e6a1c835e0a346c33daedaa"
+  },
+  "outputs": {
+    "fig_f003_state_support.pdf": "c101f618f08ac0f10d4e427973ae551a354458599b682038d42a74d75beea7ef",
+    "fig_f003_state_support.png": "b805346529ef65314ba38070173dbafa1963332bcc1a6ce6439c9bc136e5cfd0"
+  },
+  "population": {
+    "n_windows": 159779,
+    "n_states": 17
+  }
+}

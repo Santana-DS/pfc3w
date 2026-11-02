@@ -1,0 +1,33 @@
+---
+title: "Explicabilidade"
+description: "Prova de conceito SHAP no cenário E3."
+---
+
+## O que a explicação representa
+
+O piloto aplica SHAP ao Random Forest do fold 0 de E3. As contribuições
+decompõem a saída matemática do modelo em torno de um valor de referência. Elas
+não demonstram que uma intervenção física no sensor causaria a mudança prevista
+[@lundberg2017shap; @janzing2020feature].
+
+![Quinze atributos com maior importância SHAP absoluta para a classe prevista.](assets/figures/fig_f001_shap_global_e3.png){fig-alt="Gráfico horizontal apresenta atributos de pressão, vazão e temperatura ordenados por importância SHAP."}
+
+## Escopo do piloto
+
+- 269 janelas de teste, estratificadas por estado verdadeiro;
+- 11 estados presentes;
+- 46 acertos e 223 erros;
+- importância calculada para a classe prevista;
+- agregação por atributo, sensor e família estatística;
+- erro máximo de reconstrução aditiva de `8,9 × 10⁻¹³`.
+
+`P-TPT` e `QGL` concentram 39,46% da importância na amostra. Esse resultado
+mostra uso intenso dessas entradas pelo classificador, mas ainda requer análise
+por classe, poço, correção da previsão e disponibilidade dos sensores.
+
+## Próxima validação
+
+O PFC2 deverá medir estabilidade entre folds e poços, comparar modelos, testar
+sensibilidade ao background e submeter relações selecionadas à avaliação de
+plausibilidade física. Regras substitutas só serão incorporadas se acrescentarem
+uma forma de inspeção que o SHAP não oferece.

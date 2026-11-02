@@ -1,0 +1,11 @@
+\begin{tabularx}{\textwidth}{@{}p{2.2cm}X X X@{}}
+\toprule
+Estudo & Problema e população & Unidade de validação & Relação com este PFC \\
+\midrule
+Turan e Jäschke (2021) & Multiclasse no transiente; dados reais e simulados & Episódio; 30\% para teste e cinco folds no restante & Mantém janelas do episódio juntas, mas não separa poços físicos \\
+Fernandes et al. (2024) & Detecção binária \emph{one-class}; origens analisadas separadamente & Treino e teste usam porções normais da mesma instância & Avalia novidade dentro do episódio, não transferência interpoços \\
+Aslam et al. (2022) & Detecção binária com RF, DT, KNN e regressão logística; inclui XAI & Divisão estratificada aleatória 70/30 & Antecedente de SHAP, LIME e modelo substituto, sem bloqueio físico declarado \\
+Rabelo (2026) & Dezessete estados; três origens; RF e XGBoost & \texttt{GroupKFold} por identidade legada da instância & Baseline computacional direto e fonte dos parâmetros congelados \\
+Este PFC & Dezessete estados reais; RF, XGBoost e piloto SHAP & Matriz episódio/poço e retrospectivo/causal & Isola a unidade física e a disponibilidade temporal \\
+\bottomrule
+\end{tabularx}

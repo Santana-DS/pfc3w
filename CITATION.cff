@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: >-
+  Se este projeto for útil em pesquisa acadêmica, cite esta versão e as fontes
+  do 3W Dataset indicadas no repositório.
+title: Validação fisicamente independente e pré-processamento causal no 3W Dataset
+type: software
+authors:
+  - family-names: Silva
+    given-names: Lucas Santana da
+    affiliation: Universidade de Brasília
+version: 0.1.0
+date-released: 2026-11-02
+license: Apache-2.0
+repository-code: https://github.com/Santana-DS/pfc3w
+url: https://santana-ds.github.io/pfc3w/
+abstract: >-
+  Código, configurações e artefatos selecionados de um estudo sobre validação
+  por poço físico, pré-processamento temporal causal e explicabilidade de
+  classificadores de estados operacionais no 3W Dataset.
+keywords:
+  - 3W Dataset
+  - flow assurance
+  - machine learning
+  - grouped cross-validation
+  - causal preprocessing
+  - explainable artificial intelligence

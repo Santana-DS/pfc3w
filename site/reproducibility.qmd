@@ -1,0 +1,45 @@
+---
+title: "Reprodução e proveniência"
+description: "Como auditar o código e regenerar os artefatos leves."
+---
+
+## Instalação
+
+```powershell
+python -m venv .venv
+.venv\Scripts\python.exe -m pip install -e .
+```
+
+O projeto requer Python 3.11 ou 3.12. O dataset bruto, resultados volumosos e
+modelos treinados não são distribuídos no repositório.
+
+## Verificações leves
+
+```powershell
+.venv\Scripts\python.exe -m ruff check .
+.venv\Scripts\python.exe -m pytest -q
+```
+
+Os testes cobrem separação de grupos, transformações causais, geração de
+tabelas, figuras e identificadores científicos.
+
+## Artefatos publicados
+
+- `reports/artifact_manifest.csv` liga cada figura ou tabela às entradas e ao
+  gerador;
+- os JSONs de proveniência registram hashes de entradas e saídas;
+- `config/reporting/public/results.yaml` reúne os identificadores científicos;
+- `PUBLIC_INVENTORY.json`, na distribuição pública, registra todos os arquivos
+  e seus hashes.
+
+## Regeneração completa
+
+Treinamentos completos exigem o 3W Dataset 2.0.0 e os artefatos intermediários
+descritos na documentação. Os comandos extensos permanecem separados da
+reprodução leve para que a auditoria do repositório não dependa de horas de
+processamento.
+
+## Atribuição
+
+O dataset e o trabalho-base são identificados no arquivo `NOTICE`; as fontes
+acadêmicas estão em `references/library.bib`.

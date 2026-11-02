@@ -1,0 +1,7 @@
+model,display_model,metric,metric_label,published,reproduced,absolute_difference,run_id
+rf,RF,f1_macro,F1-macro,0.8716,0.8716,0.0,r0-rf-global-oof__eef390c57d
+rf,RF,f1_weighted,F1 ponderado,0.9308,0.9299,0.0009,r0-rf-global-oof__eef390c57d
+rf,RF,accuracy,Acurácia,0.9322,0.9312,0.001,r0-rf-global-oof__eef390c57d
+xgboost,XGBoost,f1_macro,F1-macro,0.9082,0.9099,0.0017,r0-xgboost-global-oof__34b1b68d91
+xgboost,XGBoost,f1_weighted,F1 ponderado,0.9361,0.9374,0.0013,r0-xgboost-global-oof__34b1b68d91
+xgboost,XGBoost,accuracy,Acurácia,0.9364,0.9376,0.0012,r0-xgboost-global-oof__34b1b68d91

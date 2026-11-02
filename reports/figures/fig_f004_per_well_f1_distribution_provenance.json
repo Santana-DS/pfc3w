@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "figure_id": "F004",
+  "inputs": {
+    "results/e1-rf-retrospective-oof__c0383f2b87/per_well_metrics.csv": "d8707ecc5b10bad99879ed97fc6a3a88b99b0678a34c051ae74632e60a1fb4b0",
+    "results/e3-rf-causal-oof__619b3c8c1d/per_well_metrics.csv": "e4463e40a44e083e3dd8f9f6338062c4a9e738d5f41dec03d8731f48d0f437d8",
+    "results/e1-xgboost-retrospective-oof__25ed36d758/per_well_metrics.csv": "7545a454548ed5b6fd212032704f75afb82454da1005ca02a10a9579b880700d",
+    "results/e3-xgboost-causal-oof__453a98252e/per_well_metrics.csv": "2eb96e64e2e565dc6c84a8718e467db9047e68df4da1819c8b5f7c5be65eb762"
+  },
+  "outputs": {
+    "fig_f004_per_well_f1_distribution.pdf": "5ace748c3c6517084596406aa99d302dbb8f2f20d5991786f3b8c29a5aefe6d2",
+    "fig_f004_per_well_f1_distribution.png": "bc8d8d0027f0286db8be4786c1de912480f7d4742a0d69fa8f7ac2ae7f1e79e0"
+  },
+  "run_ids": [
+    "e1-rf-retrospective-oof__c0383f2b87",
+    "e3-rf-causal-oof__619b3c8c1d",
+    "e1-xgboost-retrospective-oof__25ed36d758",
+    "e3-xgboost-causal-oof__453a98252e"
+  ],
+  "n_wells_per_group": 35
+}

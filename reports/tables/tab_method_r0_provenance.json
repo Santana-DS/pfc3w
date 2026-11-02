@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "table_set": "method_matrix_and_r0_reproduction",
+  "config": {
+    "path": "config/reporting/e0_e3_tables.yaml",
+    "sha256": "2a80a1aa0033f1d527e21be3b98fdd92f994f0d5057a942f6b587227db413a5f"
+  },
+  "inputs": {
+    "experiment_configs": [
+      {
+        "path": "config/experiments/r0_baseline_reproduction.yaml",
+        "sha256": "98fa61960b0c2185b1ea00c1f8ff22fbd90189ccf35932da68aefeec80ad95c2"
+      },
+      {
+        "path": "config/experiments/e0_baseline_instance_original.yaml",
+        "sha256": "167f95a1efbe7088ebdd61caf81a22b327bc7605a6df6c1e676163aec0bc8504"
+      },
+      {
+        "path": "config/experiments/e1_well_original.yaml",
+        "sha256": "9092726c46799ae1216db532a03b23fc3c33f4c8fa832b70673fa53fd74d02d7"
+      },
+      {
+        "path": "config/experiments/e2_instance_causal.yaml",
+        "sha256": "1c006bd94270b6b7b2211b6a5153577406d1fc6cb85a4406b6cde9e0b89c8b5b"
+      },
+      {
+        "path": "config/experiments/e3_well_causal.yaml",
+        "sha256": "83276c70fb011fa4db6276b1b20402ddcfa174c55a09a72a0738c45ad3392a5b"
+      }
+    ],
+    "r0_runs": [
+      {
+        "run_id": "r0-rf-global-oof__eef390c57d",
+        "project_commit": "b0ee9c43eea86ad6288f22a772ddbac27c0d26c6",
+        "metrics_sha256": "a8a80fa8369168cd861386d4e0a6f9896a880f5fe3f5567858014b49307f2b2f",
+        "manifest_sha256": "3bd51ad6d74384f9edde05ae9699624846e95521d3755a89f3d76603802ecfd4",
+        "published_metrics_sha256": "f1dd6a796b40ec516b950b495df876ea1ab89a5750e31b7b62520cc694765826"
+      },
+      {
+        "run_id": "r0-xgboost-global-oof__34b1b68d91",
+        "project_commit": "b0ee9c43eea86ad6288f22a772ddbac27c0d26c6",
+        "metrics_sha256": "c628d32655daacb9be5c229db42f4dd631a2d796feac7415c2ab6eb47b631d72",
+        "manifest_sha256": "d8a915c3ff94bd86acc26770fcf3a75a2754e0bc4d6f1685f20c70d94d3847e9",
+        "published_metrics_sha256": "f63cf55f8bb3b70e997b80975ccacbb673a01f96021ce9da71e4f58d32e992de"
+      }
+    ]
+  },
+  "outputs": {
+    "tab_t001_experiment_matrix.csv": "2fb329ecc1613cba9157da139818cd95a689900870662117a93082d1b29a1e0d",
+    "tab_t001_experiment_matrix.tex": "763aa18971f47ab18baa59f747df088882ed724ed42fa9a568768b1a861d9ce7",
+    "tab_t002_r0_reproduction.csv": "c16250b7ac58742735b74734773d859e1b5d57bce709ce27f5900ad53710ef86",
+    "tab_t002_r0_reproduction.tex": "af3fdb958bdc34c627addd22c4f20c8dda909cf49d4fda84ce15f46f3efa8107"
+  }
+}
