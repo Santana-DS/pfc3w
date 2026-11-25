@@ -1,0 +1,6 @@
+experiment_id,population,fold_group,preprocessing
+R0,todas as origens,identidade legada,histórico publicado
+E0,real,episódio,retrospectivo
+E1,real,poço,retrospectivo
+E2,real,episódio,causal
+E3,real,poço,causal

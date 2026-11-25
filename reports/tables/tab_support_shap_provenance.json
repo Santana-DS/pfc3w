@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "table_set": "state_support_and_shap_pilot",
+  "config": {
+    "path": "config/reporting/e0_e3_tables.yaml",
+    "sha256": "2a80a1aa0033f1d527e21be3b98fdd92f994f0d5057a942f6b587227db413a5f"
+  },
+  "inputs": {
+    "state_support": {
+      "run_id": "features-real-causal__bb8b5f6f66",
+      "project_commit": "20603e8df61edd16ff5461db0ce839228e3f009b",
+      "manifest_sha256": "871247eedc7fd4408440032fd968b36e9286b4b6dc968a71c87fb3e253bc6c73",
+      "features_sha256": "8290e337fd2eacdf832ce2e65f09e256e7fe0753dba2efc7946844cb9207f7c8"
+    },
+    "shap_sensor_importance": {
+      "run_id": "e3-rf-shap-fold0__904152b154",
+      "project_commit": "85e514496c9f6033d33cb46b31b305f2c7ecb485",
+      "manifest_sha256": "038674c08c1fce342625f305024c34cd20dee492bfc2a938ac9c41dfaca0f7fe",
+      "sensor_importance_sha256": "600e725320c18e7766a7a5f1f0b4e8038587b3fcd7b70330fbcc772786f89aa6",
+      "n_explanation_windows": 269,
+      "maximum_additivity_residual": 8.894829317540598e-13
+    }
+  },
+  "outputs": {
+    "tab_t003_state_support.csv": "57273bb3d20808ab82337b0fd4aa9a9357688cd77e6a1c835e0a346c33daedaa",
+    "tab_t003_state_support.tex": "0c5c7e050bdd10a13a7b22f236cc312488e8c1a1cbae4c27417cb71049052f49",
+    "tab_t007_shap_sensor_importance.csv": "7f103bfaf9e2593506a0e036044a828282e384a43b42847bd065a9ca21359b5c",
+    "tab_t007_shap_sensor_importance.tex": "d9c1f9a5f6eb7dcda878c7ecb373e83ad2bb38dd5e629bddc0155cd66b7b3914"
+  }
+}

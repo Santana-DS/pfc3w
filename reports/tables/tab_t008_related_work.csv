@@ -1,0 +1,6 @@
+study,target_and_population,validation_unit,methods_and_metrics,relation_to_pfc
+Turan e Jäschke (2021),Multiclasse durante o transiente; dados reais e simulados,Episódio; 30% teste e validação cruzada em 5 folds,Árvores e classificadores lineares; F1-macro e acurácia balanceada,Preserva episódios mas não separa poços físicos
+Fernandes et al. (2024),Detecção binária one-class; dados reais e simulados em análises separadas,Amostras normais de uma mesma instância divididas em treino e teste,LOF OCSVM Isolation Forest e autoencoders; F1,Questão diferente de generalização interpoços
+Aslam et al. (2022),Detecção binária normal versus evento; base agregada,Divisão estratificada aleatória 70/30,RF DT KNN e regressão logística; SHAP LIME e surrogate,Antecedente XAI sem separação física declarada
+Rabelo (2026),Dezessete estados; origens real simulada e desenhada,GroupKFold por identidade legada da instância,RF e XGBoost; F1-macro F1 ponderado e acurácia,Baseline computacional direto
+Este PFC,Dezessete estados; somente dados reais com identidade física,Episódio e poço em matriz 2x2 com 5 folds,RF e XGBoost; métricas globais e por poço; SHAP,Isola unidade física e disponibilidade temporal

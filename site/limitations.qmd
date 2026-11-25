@@ -1,0 +1,33 @@
+---
+title: "Limitações e uso adequado"
+description: "O que os resultados permitem — e o que ainda não permitem — concluir."
+---
+
+## Limites da evidência atual
+
+1. Foram avaliados dois ensembles de árvores com hiperparâmetros herdados do
+   baseline; não houve busca aninhada por poço.
+2. Classes raras possuem suporte físico desigual. Algumas aparecem em um ou
+   poucos poços.
+3. Janelas sobrepostas não constituem observações estatisticamente
+   independentes para intervalos de confiança ingênuos.
+4. A admissão dos episódios ainda consulta o arquivo completo, embora as
+   transformações de E2/E3 sejam causais para episódios admitidos.
+5. O rótulo por moda descreve o estado predominante em cinco minutos e não mede
+   atraso de detecção.
+6. A prova XAI cobre um fold de E3 com Random Forest; estabilidade e utilidade
+   operacional ainda não foram demonstradas.
+7. Os 35 poços observados não representam toda operação petrolífera possível.
+
+## Uso adequado
+
+Os resultados servem para comparar protocolos sob a população e as escolhas
+de modelagem declaradas. Não constituem certificação de segurança, recomendação
+operacional ou estimativa universal de desempenho em campo.
+
+## Conclusão compatível com a evidência
+
+> A validação por episódio é substancialmente mais otimista que a validação por
+> poço. O pré-processamento causal melhora os dois modelos avaliados, mas a
+> transferência para sistemas físicos não vistos permanece o principal
+> gargalo.

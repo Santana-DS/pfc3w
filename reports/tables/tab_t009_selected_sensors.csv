@@ -1,0 +1,7 @@
+signals,quantity,physical_location
+P-PDG; T-PDG,Pressão; temperatura,Fundo do poço no PDG
+P-TPT; T-TPT,Pressão; temperatura,Árvore de natal molhada no TPT
+P-MON-CKP,Pressão,Montante do choke de produção
+T-JUS-CKP,Temperatura,Jusante do choke de produção
+P-JUS-CKGL,Pressão,Jusante do choke de gas lift
+QGL,Vazão,Vazão de gás injetado pelo sistema de gas lift

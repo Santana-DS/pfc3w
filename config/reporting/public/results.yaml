@@ -1,0 +1,93 @@
+schema_version: 1
+dataset:
+  name: 3W Dataset
+  version: 2.0.0
+
+feature_sources:
+  retrospective: features-real-retrospective__1ca64ec90e
+  causal: features-real-causal__bb8b5f6f66
+
+state_support:
+  run_id: features-real-causal__bb8b5f6f66
+
+shap_sensor_importance:
+  run_id: e3-rf-shap-fold0__904152b154
+  share_column: predicted_output_share
+
+experiment_matrix_configs:
+  - config/experiments/r0_baseline_reproduction.yaml
+  - config/experiments/e0_baseline_instance_original.yaml
+  - config/experiments/e1_well_original.yaml
+  - config/experiments/e2_instance_causal.yaml
+  - config/experiments/e3_well_causal.yaml
+
+r0_reproduction:
+  - model: rf
+    display_model: RF
+    run_id: r0-rf-global-oof__eef390c57d
+  - model: xgboost
+    display_model: XGBoost
+    run_id: r0-xgboost-global-oof__34b1b68d91
+
+runs:
+  - experiment_id: E0
+    model: rf
+    display_model: RF
+    run_id: e0-rf-retrospective-oof__c7a61d9f00
+  - experiment_id: E1
+    model: rf
+    display_model: RF
+    run_id: e1-rf-retrospective-oof__c0383f2b87
+  - experiment_id: E2
+    model: rf
+    display_model: RF
+    run_id: e2-rf-causal-oof__af2b9a92a9
+  - experiment_id: E3
+    model: rf
+    display_model: RF
+    run_id: e3-rf-causal-oof__619b3c8c1d
+  - experiment_id: E0
+    model: xgboost
+    display_model: XGBoost
+    run_id: e0-xgboost-retrospective-oof__25d2e05d86
+  - experiment_id: E1
+    model: xgboost
+    display_model: XGBoost
+    run_id: e1-xgboost-retrospective-oof__25ed36d758
+  - experiment_id: E2
+    model: xgboost
+    display_model: XGBoost
+    run_id: e2-xgboost-causal-oof__be63c3106d
+  - experiment_id: E3
+    model: xgboost
+    display_model: XGBoost
+    run_id: e3-xgboost-causal-oof__453a98252e
+
+xai_pilot:
+  experiment_id: E3
+  model: rf
+  run_id: e3-rf-shap-fold0__904152b154
+
+contrasts:
+  - contrast_id: E1-E0
+    minuend: E1
+    subtrahend: E0
+    factor_latex: "episódio $\\rightarrow$ poço, retrospectivo"
+  - contrast_id: E3-E2
+    minuend: E3
+    subtrahend: E2
+    factor_latex: "episódio $\\rightarrow$ poço, causal"
+  - contrast_id: E2-E0
+    minuend: E2
+    subtrahend: E0
+    factor_latex: "retrospectivo $\\rightarrow$ causal, episódio"
+  - contrast_id: E3-E1
+    minuend: E3
+    subtrahend: E1
+    factor_latex: "retrospectivo $\\rightarrow$ causal, poço"
+
+published_artifacts:
+  metrics: reports/tables/tab_t004_e0_e3_metrics.csv
+  contrasts: reports/tables/tab_t005_e0_e3_contrasts.csv
+  per_well_summary: reports/tables/tab_t006_per_well_summary.csv
+  artifact_manifest: reports/artifact_manifest.csv

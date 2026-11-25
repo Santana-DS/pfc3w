@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "table_set": "e0_e3_preliminary",
+  "config": {
+    "path": "config/reporting/e0_e3_tables.yaml",
+    "sha256": "2a80a1aa0033f1d527e21be3b98fdd92f994f0d5057a942f6b587227db413a5f"
+  },
+  "inputs": [
+    {
+      "run_id": "e0-rf-retrospective-oof__c7a61d9f00",
+      "project_commit": "570fd9588fc88bede0c88f24676c6319ed7c77d5",
+      "metrics_sha256": "290171d737f347688c12d935c38df4fb993b416f0e48ef7b9aafbf320071352a",
+      "manifest_sha256": "ab3f1f995944973ba99b32b4a28224f415643e0f1c4e926d8422093f7430a088",
+      "per_well_metrics_sha256": "ed5c4fcd2a9dd74169e2a8c121bcecdd354eb754e4ea2b6c72e36ce88008f393"
+    },
+    {
+      "run_id": "e1-rf-retrospective-oof__c0383f2b87",
+      "project_commit": "570fd9588fc88bede0c88f24676c6319ed7c77d5",
+      "metrics_sha256": "680b298ace73cb171746293ccf5e8610d4c0022efd373ece75f02682f8a1c7f7",
+      "manifest_sha256": "965bb2fdb6567e8400ae7bded2df2e1202940384a4bf33984979bb5abb3fac7b",
+      "per_well_metrics_sha256": "d8707ecc5b10bad99879ed97fc6a3a88b99b0678a34c051ae74632e60a1fb4b0"
+    },
+    {
+      "run_id": "e2-rf-causal-oof__af2b9a92a9",
+      "project_commit": "5923abf4eaa89b8ede293c4af09b0e4807738d92",
+      "metrics_sha256": "7c49c8783eb84d428efc088456798c4c601a6462b72e16a1faa8d65c1db24185",
+      "manifest_sha256": "1e74d3258805ca2738614b557b8c3c9771c98b3625dc4ca6a0f9044d9f6ac28d",
+      "per_well_metrics_sha256": "9e69ca8ede7d3b539f01ea4fbfd95a2496031125ed6fe7baabb69ac91481764c"
+    },
+    {
+      "run_id": "e3-rf-causal-oof__619b3c8c1d",
+      "project_commit": "5923abf4eaa89b8ede293c4af09b0e4807738d92",
+      "metrics_sha256": "fa9aa90e39d4fb5130dfdd8d9280f4a9bc5d1d8213edfac6b35b04289cdcb7cc",
+      "manifest_sha256": "6eb85f317a1192f0ca1b65ce6ee633c755803fe14352207b02c21804244abc59",
+      "per_well_metrics_sha256": "e4463e40a44e083e3dd8f9f6338062c4a9e738d5f41dec03d8731f48d0f437d8"
+    },
+    {
+      "run_id": "e0-xgboost-retrospective-oof__25d2e05d86",
+      "project_commit": "50e5f2b3eca3c5cda87cbd5263bbc1a9f9a75fbb",
+      "metrics_sha256": "c852937be9c061e9c15bbb75234207bb04c78fec2968b98d0ba8e0d35bb8b2e5",
+      "manifest_sha256": "7a490b90487d5be2f36f8e62795ab7323da1cb18eedd78bb12627edef0760376",
+      "per_well_metrics_sha256": "4c23db684d0c8aa39ccbfc8f343f8bc54f20499b8229f3ebd7708c7ca42179cf"
+    },
+    {
+      "run_id": "e1-xgboost-retrospective-oof__25ed36d758",
+      "project_commit": "50e5f2b3eca3c5cda87cbd5263bbc1a9f9a75fbb",
+      "metrics_sha256": "006764867692597aa763c957d7a4fe7901948b5381dac8044b5df601fd7f86d2",
+      "manifest_sha256": "66644ca73a4b77a611b29c841a826c8ca85068ed8ca1d7eba4b6614b343c2d47",
+      "per_well_metrics_sha256": "7545a454548ed5b6fd212032704f75afb82454da1005ca02a10a9579b880700d"
+    },
+    {
+      "run_id": "e2-xgboost-causal-oof__be63c3106d",
+      "project_commit": "50e5f2b3eca3c5cda87cbd5263bbc1a9f9a75fbb",
+      "metrics_sha256": "264999df2426ffe6dbe85182d64f2cabe360afbe0b19e1888f2b119b0439cc7c",
+      "manifest_sha256": "be1c00ee11334b686991d504a1e9a7166f3699b439719d77a2e8e7915c66e02e",
+      "per_well_metrics_sha256": "24272de4ee7285332939ed9d7f44051958275b3afac7290658840ed9c058a11d"
+    },
+    {
+      "run_id": "e3-xgboost-causal-oof__453a98252e",
+      "project_commit": "50e5f2b3eca3c5cda87cbd5263bbc1a9f9a75fbb",
+      "metrics_sha256": "d57363786a5a8bf8b522abd016a946808decdfe79217f329c0844500a8f1f35e",
+      "manifest_sha256": "a11675adbedd21771da4d2731a9c0738049f51fcc4ac29b01565e734eb3370a0",
+      "per_well_metrics_sha256": "2eb96e64e2e565dc6c84a8718e467db9047e68df4da1819c8b5f7c5be65eb762"
+    }
+  ],
+  "outputs": {
+    "tab_t004_e0_e3_metrics.csv": "1b25234d398ac6a3f05039b2df7fdbf5c5485a1742aa44a8ca120d19c0af1bb0",
+    "tab_t004_e0_e3_metrics.tex": "407d905b073079f7065f50dec4f788f2bf4c045f86be5ec9c2aa0d1ba96e7845",
+    "tab_t005_e0_e3_contrasts.csv": "fede6744e3302f3ee888f24b4cbbb7d665c95831102e0e50ffab5ec6463088b5",
+    "tab_t005_e0_e3_contrasts.tex": "67d886287b4099cc31d3c3d8f2d4a5da177b98ad95e74630fe1a4dcd1b83ff26",
+    "tab_t006_per_well_summary.csv": "db8e5b5b11332868c8c99bf56d5b99172118eb4da7cbc94ef66da6735259e840",
+    "tab_t006_per_well_summary.tex": "e7609613d52a76e527f8d2e2e6c8c83eaa41d3149b77ca7bafaf67592e357e44"
+  }
+}

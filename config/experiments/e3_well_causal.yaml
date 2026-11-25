@@ -1,0 +1,24 @@
+experiment_id: E3
+description: "Separação por well_id com pré-processamento causal"
+data:
+  sources: [REAL]
+  instance_identity: instance_id
+split:
+  group_column: well_id
+  n_splits: 5
+  require_class_coverage_report: true
+preprocessing:
+  variant: causal
+  forward_fill_limit: 60
+  normalization: expanding_instance_zscore_inclusive
+  normalization_ddof: 0
+  cold_start_value: 0.0
+  filter: one_sided_gaussian
+  gaussian_sigma: 2.0
+  gaussian_truncate: 4.0
+  window_size: 300
+  step_size: 150
+  decision_time: window_end
+  imputation: training_fold_median_then_zero
+models: [random_forest, xgboost]
+random_seed: 42

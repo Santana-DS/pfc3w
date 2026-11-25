@@ -1,0 +1,16 @@
+experiment_id: R0
+description: "Reprodução fiel do baseline publicado"
+data:
+  sources: [REAL, SIMULATED, DRAWN]
+  instance_identity: legacy_instance_id
+split:
+  group_column: legacy_instance_id
+  n_splits: 5
+preprocessing:
+  variant: historical_published_metrics
+  imputation: global_median_before_cv
+models: [random_forest, xgboost]
+hyperparameters:
+  source: published_metrics_json
+  rerun_search: false
+random_seed: 42

@@ -1,0 +1,5 @@
+# Modelo para paths.local.yaml, arquivo específico de cada ambiente de execução.
+dataset_root: "C:/path/to/3W/dataset"
+dataset_repo: "C:/path/to/3W"
+baseline_repo: "C:/path/to/flow-assurance-ml"
+results_root: "./results"

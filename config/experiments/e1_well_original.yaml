@@ -1,0 +1,16 @@
+experiment_id: E1
+description: "Separação por well_id com pré-processamento original"
+data:
+  sources: [REAL]
+  instance_identity: instance_id
+split:
+  group_column: well_id
+  n_splits: 5
+  require_class_coverage_report: true
+preprocessing:
+  variant: retrospective_baseline_revision
+  normalization: full_instance_zscore
+  filter: bidirectional_gaussian
+  imputation: full_instance_median
+models: [random_forest, xgboost]
+random_seed: 42

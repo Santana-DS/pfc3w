@@ -1,0 +1,16 @@
+{
+  "run_id": "e3-rf-shap-fold0__904152b154",
+  "project_commit": "85e514496c9f6033d33cb46b31b305f2c7ecb485",
+  "manifest_sha256": "038674c08c1fce342625f305024c34cd20dee492bfc2a938ac9c41dfaca0f7fe",
+  "feature_importance_sha256": "591efde25df283bb8426446e5714a0c9150569beddd92560254bd4fdc8a7f0b3",
+  "n_explanation_windows": 269,
+  "sample_selection": "up_to_maximum_per_class_uniform_without_replacement",
+  "maximum_additivity_residual": 8.894829317540598e-13,
+  "schema_version": 1,
+  "figure_id": "F001",
+  "top_n": 15,
+  "outputs": {
+    "fig_f001_shap_global_e3.pdf": "9938ce5ece0e1ce83f90ee1829c83b26a8315ce79075f31453841d14169fa0b8",
+    "fig_f001_shap_global_e3.png": "d4e60db68eea3ace574c1a2a1309865b4addcc6a3f03db63816805db382a666a"
+  }
+}

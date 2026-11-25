@@ -1,0 +1,41 @@
+---
+title: "Resultados E0–E3"
+description: "Desempenho global, heterogeneidade por poço e matrizes de confusão."
+---
+
+## Comparação controlada
+
+![F1-macro nas quatro células da matriz E0–E3.](assets/figures/fig_f002_e0_e3_f1_macro.png){fig-alt="Barras mostram desempenho maior em E0 e E2 e queda acentuada em E1 e E3 para os dois modelos."}
+
+| Contraste | Fator alterado | Random Forest | XGBoost |
+|---|---|---:|---:|
+| E1 − E0 | episódio → poço, retrospectivo | −0,2645 | −0,2632 |
+| E3 − E2 | episódio → poço, causal | −0,2544 | −0,2768 |
+| E2 − E0 | retrospectivo → causal, episódio | +0,0618 | +0,0793 |
+| E3 − E1 | retrospectivo → causal, poço | +0,0719 | +0,0657 |
+
+A mudança da unidade de validação produz o maior efeito. A diferença entre
+Random Forest e XGBoost é pequena diante da diferença entre os protocolos.
+
+## Heterogeneidade física
+
+![Distribuição do F1-macro por poço em E1 e E3.](assets/figures/fig_f004_per_well_f1_distribution.png){fig-alt="Boxplots e pontos individuais mostram ampla variação de F1 entre 35 poços."}
+
+As métricas globais escondem variação substancial entre poços. Em E3, a
+acurácia individual varia de 0,0027 a 1,0000 no Random Forest e de 0,0301 a
+0,9949 no XGBoost. Por isso, o projeto reporta agregações por janela e por
+sistema físico.
+
+## Estrutura dos erros
+
+![Matrizes de confusão normalizadas por estado verdadeiro para E3.](assets/figures/fig_f005_e3_confusion_matrices.png){fig-alt="Duas matrizes de confusão com 17 estados comparam Random Forest e XGBoost em E3."}
+
+Alguns estados mantêm capacidade discriminativa, enquanto várias classes raras
+ficam sem reconhecimento consistente. Número de janelas não substitui cobertura
+física: o estado 6 aparece em apenas um poço e pode ficar ausente do treino.
+
+::: {.takeaway}
+O resultado não mede apenas uma queda de desempenho. Ele identifica qual
+hipótese de generalização estava sendo medida e quantifica a diferença entre
+reconhecer episódios e transferir o modelo para poços desconhecidos.
+:::

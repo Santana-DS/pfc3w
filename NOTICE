@@ -1,0 +1,24 @@
+PFC 3W — atribuições e materiais de terceiros
+================================================
+
+Copyright 2026 Lucas Santana da Silva.
+
+Este projeto produz análises derivadas do 3W Dataset 2.0.0, disponibilizado
+pela Petrobras sob Creative Commons Attribution 4.0 International (CC BY 4.0):
+
+https://github.com/petrobras/3W
+https://creativecommons.org/licenses/by/4.0/
+
+Transformações realizadas neste projeto incluem seleção documentada de
+episódios, pré-processamento temporal, segmentação em janelas, extração de
+atributos, separação de folds, treinamento de classificadores, cálculo de
+métricas e geração de explicações. O uso do dataset não implica endosso da
+Petrobras aos resultados ou às interpretações deste trabalho.
+
+O trabalho de Gabriel Rabelo é a referência metodológica e o baseline
+reproduzido. Seu repositório não é redistribuído nesta distribuição:
+
+https://github.com/GRabelo23/flow-assurance-ml
+
+As referências acadêmicas completas e as citações recomendadas para o 3W e
+para o trabalho anterior estão em references/library.bib.

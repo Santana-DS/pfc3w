@@ -1,0 +1,11 @@
+code,event,transient_code,operational_summary
+0,Operação normal,—,Ausência de evento indesejável rotulado
+1,Aumento abrupto de BSW,101,Elevação súbita da proporção de água e sedimentos
+2,Fechamento espúrio de DHSV,102,Fechamento inesperado da válvula de segurança de fundo
+3,Golfadas severas,—,Oscilações periódicas e intensas do escoamento
+4,Instabilidade de escoamento,—,Perturbações não periódicas do regime de fluxo
+5,Perda rápida de produtividade,105,Redução súbita da capacidade produtiva do poço
+6,Restrição rápida no PCK,106,Restrição significativa no choke de produção
+7,Incrustação no PCK,107,Deposição inorgânica no choke de produção
+8,Hidrato na linha de produção,108,Formação de hidratos com risco de obstrução da linha
+9,Hidrato na linha de serviço,109,Formação de hidratos na linha de serviço

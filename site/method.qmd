@@ -1,0 +1,47 @@
+---
+title: "Método"
+description: "Matriz fatorial E0–E3, métricas e rastreabilidade."
+---
+
+## Matriz experimental
+
+| Experimento | População | Unidade do fold | Pré-processamento | Função |
+|---|---|---|---|---|
+| R0 | todas as origens | identidade legada | histórico publicado | reprodução do baseline |
+| E0 | real | episódio | retrospectivo | controle mais permissivo |
+| E1 | real | poço | retrospectivo | efeito da independência física |
+| E2 | real | episódio | causal | efeito do regime temporal |
+| E3 | real | poço | causal | cenário principal de transferência |
+
+R0 não integra o fatorial porque usa uma população diferente. E0–E3 compartilham
+159.779 janelas reais, 960 episódios aceitos, 35 poços e 88 atributos extraídos
+de oito sensores.
+
+## Pré-processamento causal
+
+Em E2 e E3:
+
+- o z-score é expansivo, usando apenas o prefixo disponível;
+- o filtro gaussiano é unilateral;
+- a imputação é ajustada somente no fold de treino;
+- a janela é interpretada como uma decisão emitida após sua última amostra.
+
+Testes automatizados verificam invariância a alterações feitas no futuro da
+série. A seleção inicial de episódios, entretanto, ainda consulta o episódio
+completo; por isso, a avaliação é condicional à população admitida.
+
+## Validação
+
+O protocolo usa cinco folds agrupados. As previsões out-of-fold são agregadas
+antes do cálculo das métricas globais. Nenhuma janela recebe mais de uma
+previsão e nenhum `well_id` cruza treino e teste em E1/E3.
+
+As métricas principais são F1-macro sobre os 17 estados, F1-macro sobre estados
+presentes em pelo menos dois poços, F1 ponderado, acurácia balanceada, acurácia,
+desempenho por classe e distribuição por poço.
+
+## Rastreabilidade
+
+Cada resultado publicado aponta para um identificador científico, configuração,
+hashes das entradas, commit e script gerador. Os nomes com data e hora são
+apenas metadados privados de execução e não definem a identidade científica.

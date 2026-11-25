@@ -1,0 +1,48 @@
+---
+title: "Problema científico"
+description: "Correlação física, informação futura e generalização para poços não vistos."
+---
+
+## O objeto de estudo
+
+O 3W Dataset organiza séries temporais multivariadas de poços de petróleo e
+estados operacionais relacionados à garantia de escoamento [@vargas2019threew;
+@vargas2026threew]. Cada arquivo representa um episódio, mas vários episódios
+podem vir do mesmo poço físico.
+
+Essa estrutura cria duas perguntas distintas:
+
+1. o modelo generaliza para outro episódio de um poço que já apareceu no
+   treinamento?;
+2. o modelo generaliza para um poço físico inteiramente desconhecido?
+
+Uma separação apenas por episódio responde à primeira. Para aproximar um
+cenário de implantação em novos sistemas físicos, é necessário agrupar os folds
+por `well_id`.
+
+## Duas fontes de otimismo
+
+### Dependência física
+
+Pressões, temperaturas, vazões e relações entre sensores carregam características
+do equipamento, da instrumentação e das condições permanentes do poço. Se o
+mesmo poço aparece em treino e teste, o algoritmo pode explorar regularidades
+específicas daquele sistema.
+
+### Informação temporal futura
+
+Normalização, filtragem ou imputação calculadas sobre o episódio completo podem
+usar amostras posteriores ao instante que se deseja classificar. Isso é válido
+para análise retrospectiva, mas incompatível com previsão causal em tempo de
+operação.
+
+## Pergunta de pesquisa
+
+> Em que medida o desempenho e as explicações de classificadores de estados
+> operacionais no 3W Dataset se mantêm quando poços físicos são separados entre
+> treino e teste e o pré-processamento é restrito às informações disponíveis no
+> instante da previsão?
+
+O trabalho anterior fornece o baseline metodológico. A contribuição deste
+projeto está na auditoria do protocolo, na separação dos dois fatores e na
+avaliação das explicações sob independência física.

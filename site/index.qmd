@@ -1,0 +1,87 @@
+---
+title: "Validação fisicamente independente no 3W Dataset"
+title-block-style: none
+body-classes: home-page
+page-layout: full
+toc: false
+---
+
+::: {.hero}
+# O modelo reconhece um estado — ou reconhece o poço?
+
+Este projeto investiga quanto do desempenho de classificadores de estados
+operacionais permanece quando poços físicos são mantidos integralmente fora do
+treinamento e o pré-processamento usa somente informação disponível até o
+instante da previsão.
+:::
+
+## Resultado central do PFC1
+
+::: {.metric-grid}
+::: {.metric-card}
+**−0,2645**
+
+Queda de F1-macro do Random Forest ao trocar separação por episódio por
+separação por poço, no regime retrospectivo.
+:::
+
+::: {.metric-card}
+**−0,2768**
+
+Queda de F1-macro do XGBoost ao impor independência por poço no regime causal.
+:::
+
+::: {.metric-card}
+**+0,0719**
+
+Ganho do pré-processamento causal sobre o retrospectivo para Random Forest com
+separação por poço.
+:::
+
+::: {.metric-card}
+**35 poços**
+
+População física efetiva após a seleção documentada dos episódios reais.
+:::
+:::
+
+![F1-macro out-of-fold para Random Forest e XGBoost nas quatro células da matriz experimental.](assets/figures/fig_f002_e0_e3_f1_macro.png){fig-alt="Gráfico de barras comparando F1-macro de Random Forest e XGBoost em E0, E1, E2 e E3."}
+
+::: {.takeaway}
+**Leitura defensável.** Separar por episódio produz uma estimativa muito mais
+otimista que separar por poço. O pré-processamento causal melhora os dois
+modelos avaliados, mas não elimina a dificuldade de transferir o classificador
+para sistemas físicos não vistos.
+:::
+
+## Como a pergunta foi isolada
+
+::: {.factor-grid}
+::: {.factor-card}
+### Unidade de validação
+
+Compara folds definidos por `instance_id` e por `well_id`. O segundo protocolo
+impede que episódios do mesmo poço apareçam simultaneamente em treino e teste.
+:::
+
+::: {.factor-card}
+### Regime temporal
+
+Compara o processamento retrospectivo do baseline com uma variante causal:
+normalização expansiva, filtro unilateral e imputação ajustada apenas no treino.
+:::
+
+::: {.factor-card}
+### Modelos
+
+Random Forest e XGBoost são mantidos com os hiperparâmetros publicados. Assim,
+a comparação prioriza o protocolo experimental, não uma nova competição de
+arquiteturas.
+:::
+:::
+
+## Navegação recomendada
+
+Comece pelo [problema](problem.qmd), examine a matriz no [método](method.qmd) e
+então consulte [resultados](results.qmd), [XAI](xai.qmd),
+[limitações](limitations.qmd) e [reprodução](reproducibility.qmd).

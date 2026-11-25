@@ -1,0 +1,5 @@
+contrast_id,factor_latex,rf_f1_macro_delta,xgboost_f1_macro_delta,rf_source_runs,xgboost_source_runs
+E1-E0,"episódio $\rightarrow$ poço, retrospectivo",-0.2645,-0.2632,e1-rf-retrospective-oof__c0383f2b87;e0-rf-retrospective-oof__c7a61d9f00,e1-xgboost-retrospective-oof__25ed36d758;e0-xgboost-retrospective-oof__25d2e05d86
+E3-E2,"episódio $\rightarrow$ poço, causal",-0.2544,-0.2768,e3-rf-causal-oof__619b3c8c1d;e2-rf-causal-oof__af2b9a92a9,e3-xgboost-causal-oof__453a98252e;e2-xgboost-causal-oof__be63c3106d
+E2-E0,"retrospectivo $\rightarrow$ causal, episódio",0.0618,0.0793,e2-rf-causal-oof__af2b9a92a9;e0-rf-retrospective-oof__c7a61d9f00,e2-xgboost-causal-oof__be63c3106d;e0-xgboost-retrospective-oof__25d2e05d86
+E3-E1,"retrospectivo $\rightarrow$ causal, poço",0.0719,0.0657,e3-rf-causal-oof__619b3c8c1d;e1-rf-retrospective-oof__c0383f2b87,e3-xgboost-causal-oof__453a98252e;e1-xgboost-retrospective-oof__25ed36d758
