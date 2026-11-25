@@ -4,8 +4,9 @@
 [![Deploy Quarto site](https://github.com/Santana-DS/pfc3w/actions/workflows/pages.yml/badge.svg)](https://github.com/Santana-DS/pfc3w/actions/workflows/pages.yml)
 
 Estudo sobre generalização entre poços físicos, pré-processamento temporal
-causal e explicabilidade de classificadores de estados operacionais no 3W
-Dataset. Projeto desenvolvido por Lucas Santana da Silva no curso de Engenharia
+causal e explicabilidade de classificadores de estados operacionais com o
+[3W Dataset 2.0.0](https://github.com/petrobras/3W), publicado pela Petrobras.
+Projeto desenvolvido por Lucas Santana da Silva no curso de Engenharia
 Mecatrônica — Controle e Automação da Universidade de Brasília.
 
 ## Pergunta de pesquisa
@@ -17,7 +18,9 @@ quando:
 2. o pré-processamento usa somente informação disponível até o instante da
    previsão?
 
-O trabalho de Gabriel Rabelo fornece o baseline metodológico. Este projeto
+Este projeto dá continuidade ao trabalho de graduação de Gabriel Rabelo, autor
+da [implementação de referência para classificação de estados operacionais no 3W](https://github.com/GRabelo23/flow-assurance-ml).
+O presente estudo
 contribui com a auditoria da unidade de validação, uma matriz fatorial que isola
 dependência física e regime temporal, proveniência de artefatos e uma prova de
 conceito XAI sob independência por poço.
